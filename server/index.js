@@ -8,7 +8,7 @@ import passport from 'passport';
 import { Strategy } from 'passport-local';
 import cookieParser from 'cookie-parser';
 import jwt from 'jsonwebtoken';
-import env from'dotenv';
+import env from 'dot-env';
 import postgres from 'postgres';
 
 try {
