@@ -13,7 +13,7 @@ const [players,setPlayers]=React.useState([{name:"Please wait 50 seconds",ga:nul
 );
 async function getGA(){
     try {
-        const result =await fetch("https://bluemoonstats.onrender.com/getga");
+        const result =await fetch("/getga");
         const jsonData=await result.json()
         //console.log(jsonData);
         setPlayers(jsonData);
