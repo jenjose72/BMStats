@@ -10,7 +10,7 @@ function EditPlayerStats(){
         setSuccess(false);
         event.preventDefault();
         console.log(playerstats);
-        const result = await fetch('https://bluemoonstats.onrender.com/editplayerstats',{
+        const result = await fetch('https://bluemoonstats.onrender.com/editplayerstatsroute',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'

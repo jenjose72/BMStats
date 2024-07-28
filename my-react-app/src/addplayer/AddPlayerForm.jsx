@@ -19,7 +19,7 @@ function AddPlayerForm(){
         event.preventDefault();
        setSuccess(false)
         let body='';
-        const response = await fetch('https://bluemoonstats.onrender.com/addplayer',{
+        const response = await fetch('https://bluemoonstats.onrender.com/addplayerroute',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'

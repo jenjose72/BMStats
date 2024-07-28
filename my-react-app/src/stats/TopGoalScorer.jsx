@@ -13,7 +13,7 @@ const [players,setPlayers]=React.useState([{name:"Please wait 50 seconds",goals:
 );
 async function getGoals(){
     try {
-        const result =await fetch("https://bluemoonstats.onrender.com/Stats");
+        const result =await fetch("https://bluemoonstats.onrender.com/getgoals");
         //const result =await fetch("http://localhost:3000/Stats");
         const jsonData=await result.json()
         //console.log(jsonData);

@@ -48,7 +48,7 @@ app.use(express.static(path.join(__dirname,"/my-react-app/dist")))
 
 
 
-app.get('/Stats',async(req,res)=>{
+app.get('/getgoals',async(req,res)=>{
     try {
         const result = await db.query('SELECT name,jerseynumber,goals FROM s2324 ORDER BY goals DESC limit 5;')
         res.json(result.rows);
@@ -105,7 +105,7 @@ app.get("/getmp",async(req,res)=>{
 })
 
 //add player here 
-app.post('/addplayer',async(req,res)=>{
+app.post('/addplayerroute',async(req,res)=>{
     try {
        
        const playerdetails = req.body;
@@ -126,7 +126,7 @@ app.post('/addplayer',async(req,res)=>{
 
 //receive and update player stats here
 
-app.post('/editplayerstats',async(req,res)=>{
+app.post('/editplayerstatsroute',async(req,res)=>{
     
     try {
         let i=0;
@@ -257,7 +257,7 @@ app.post("/getplayerlist",async(req,res)=>{
 
 
 //update player details here 
-app.post('/editplayer',async(req,res)=>{
+app.post('/editplayerroute',async(req,res)=>{
     const playerdetails= req.body;
     console.log(playerdetails.position);
     const result = await db.query('UPDATE players SET jerseynumber = $1, age = $2, position = $3 WHERE name = $4',[playerdetails.jerseynumber,playerdetails.age,playerdetails.position,playerdetails.name]);
@@ -265,7 +265,7 @@ app.post('/editplayer',async(req,res)=>{
 })
 //delete player here
 
-app.post('/deleteplayer',async(req,res)=>{
+app.post('/deleteplayerroute',async(req,res)=>{
     try {
         const playerdetails= req.body;
     if(playerdetails.year=="s2324"){
@@ -295,7 +295,7 @@ const verifyUser=(req,res,next)=>{
     })
 }
 
-app.get('/admin',verifyUser,async(req,res)=>{
+app.get('/adminroute',verifyUser,async(req,res)=>{
     res.json({Status:"Success"});
 })
 

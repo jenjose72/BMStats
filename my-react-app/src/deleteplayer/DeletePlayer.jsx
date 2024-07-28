@@ -6,7 +6,7 @@ function DeletePlayer(){
     async function handleSubmit(event){
         event.preventDefault();
         console.log(playerstats);
-        const result = await fetch('https://bluemoonstats.onrender.com/deleteplayer',{
+        const result = await fetch('https://bluemoonstats.onrender.com/deleteplayerroute',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
