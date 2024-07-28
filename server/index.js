@@ -88,6 +88,7 @@ app.get("/getga",async(req,res)=>{
     try {
         const result = await db.query('SELECT name,jerseynumber,ga FROM s2324 ORDER BY ga DESC limit 5;')
         res.json(result.rows);
+        console.log(result.rows);
     } catch (error) {
         console.log(error.message);
         console.log("Error at getting /ga");
