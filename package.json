@@ -4,9 +4,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "server": "nodemon backend/index.js",
-    "start": "node backend/index.js",
-    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+    "server": "nodemon server/index.js",
+    "start": "node server/index.js",
+    "build": "npm install && npm install --prefix my-react-app && npm run build --prefix my-react-app"
   },
   "keywords": [],
   "author": "",
