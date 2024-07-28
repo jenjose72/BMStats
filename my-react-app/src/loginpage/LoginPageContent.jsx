@@ -32,7 +32,7 @@ function LoginPageContent(){
             
         // })
         const data= await result.json();
-        setLoginStatus(result.ok);
+       // setLoginStatus(result.ok);
         if(result.ok){
             localStorage.setItem('admin',JSON.stringify(data.message));
             setIsAuthenticated(true); 
