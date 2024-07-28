@@ -10,6 +10,7 @@ import cookieParser from 'cookie-parser';
 import jwt from 'jsonwebtoken';
 import env from 'dotenv';
 import postgres from 'postgres';
+import path from 'path';
 
 try {
     db.connect();
@@ -19,6 +20,7 @@ try {
 const app = express();
 const saltRounds=10;
 env.config();
+const __dirname=path.resolve()
 
 app.use(cors({
     //origin:["https://bluemoonstats-3gfn.onrender.com"],
@@ -43,8 +45,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-app.get('/',(req,res)=>{
-    res.send('hello world');
+app.get('*',(req,res)=>{
+    res.sendFile(path.join(__dirname,"/frontend/dist/index.html"));
 })
 
 app.get('/Stats',async(req,res)=>{
