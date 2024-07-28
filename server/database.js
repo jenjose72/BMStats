@@ -1,5 +1,5 @@
 import db from 'pg';
-import env from 'dotenv';
+import env from 'dot-env';
 import postgres from 'postgres';
 
 env.config();
