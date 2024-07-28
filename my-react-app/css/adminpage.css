@@ -1,0 +1,79 @@
+#root{
+    display:grid;
+    height:100vh;
+    grid-template-rows:60px 1fr 60px;
+    grid-template-columns: 0.5fr 940px 0.5fr;
+    gap:30px;
+}
+
+.header{
+    grid-column : span 3;
+}
+
+.footer{
+    grid-column :span 3;
+}
+.heading-admin{
+    margin-top:60px;
+    font-family: "Roboto Condensed", sans-serif;    
+    font-size: 3rem;
+    color:#1C2C5B;
+}
+.a{
+    text-decoration: none;
+    
+}
+.contents{
+    grid-column-start:2 ;
+}
+.admincontent{
+    width: 100%;
+    height: 100%;
+    grid-column-start: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr;
+    grid-gap:5%
+}
+.heading-admin{
+    grid-column:span 2;
+    font-family: "Roboto Condensed", sans-serif;    
+    font-size: 3rem;
+    color:#1C2C5B;
+}
+.card-admin{
+    height:150px;
+    border-radius:10px;
+    text-align: right;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    
+}
+.card-admin p{
+    position:relative;
+    bottom:0;
+    top:120px;
+    right:20px;
+    color:white;
+    font-family: "Roboto Condensed", sans-serif;    
+    font-size: 1rem;
+}
+.addplayer{
+    background-image: url('../images/Addimg.jpg');
+    background-size: 100% 150px ;
+}
+
+.editplayer{
+    background-image: url('../images/editimg.jpeg');
+    background-size: 100% 150px ;
+
+}
+
+.editplayerstats{
+    background-image: url('../images/editstatsimg.jpeg');
+    background-size: 100% 150px ;
+}
+
+.deleteplayer{
+    background-image: url('../images/deleteimg.jpeg');
+    background-size: 100% 150px ;
+}

@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+.header {
+    width:100%;
+    height:60px;
+    display:block;
+    background-color: #6CABDD;
+    padding: 5px 10px;
+    font-family: "Roboto Condensed", sans-serif;
+    
+  }
+  /* Style the header links */
+  .header a {
+    float: left;
+    color: #1C2C5B;
+    text-align: left;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  
+  /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+  .header a.logo {
+    color:#1C2C5B;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  /* Change the background color on mouse-over */
+  .header a:hover {
+    color: #FFC659;
+  }
+  
+  /* Style the active/current link*/
+  .header a.active {
+    background-color: #1C2C5B;
+    color: white;
+  }
+  
+  /* Float the link section to the right */
+  .header-right {
+    float: right;
+  }
+  
+  .logout{
+    font-family: "Roboto Condensed", sans-serif;
+    background-color:#1C2C5B!important;
+    text-decoration: none;
+    outline: none;
+    border:none;
+    text-align: center !important;
+    padding:12px;
+    margin:auto;
+    border-radius: 10px;
+    color:white;
+    position: relative;
+    top:4px;
+    right:10px;
+    text-transform: uppercase;
+    width:100px;
+  }
+  body{
+    background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  }
+  .logout:hover{
+    cursor: pointer;
+    background-color: red !important;
+  }
+  @media screen and (min-device-width : 320px) and (max-device-width : 480px){
+    #root{
+        display:grid;
+        height:100%;
+        grid-template-rows:60px 100% 60px;
+        grid-template-columns: 100%;
+        gap:0px;
+    }
+    .content{
+         grid-column-start: 1;
+    }
+    .admincontent{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        margin-bottom: 150px;
+    }
+    h1{
+        margin-top:0px;
+        font-family: "Roboto Condensed", sans-serif;    
+        font-size: 3rem;
+        color:#1C2C5B;
+        margin-left: 5%;
+    }
+    .admincontent a{
+        width:90%;
+        margin-left: 5%;
+    }
+    .addplayer{
+        background-image: url('../images/Addimg.jpg');
+        background-size: 100% 150px ;
+    }
+    
+    .editplayer{
+        background-image: url('../images/editimg.jpeg');
+        background-size: 100% 150px ;
+    
+    }
+    
+    .editplayerstats{
+        background-image: url('../images/editstatsimg.jpeg');
+        background-size: 100% 150px ;
+    }
+    
+    .deleteplayer{
+        background-image: url('../images/deleteimg.jpeg');
+        background-size: 100% 150px ;
+    }
+    .logout{
+        width:80px;
+        right:5px;
+    }
+  }

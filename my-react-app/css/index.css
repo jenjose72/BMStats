@@ -1,0 +1,229 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #ffffff;
+background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+ul{
+  position:relative;
+  width:425px;
+  margin:100px auto 0;
+  padding:10px;
+  box-sizing: border-box;
+}
+
+ul li{
+  display:flex;
+  padding: 10px 20px;
+  color:#000000;
+  margin:5px 0;
+  transition:.5s;
+}
+
+.header CircleIcon{
+float:left;
+}
+.header {
+  width:100%;
+  height:60px;
+  display:block;
+  background-color: #6CABDD;
+  padding: 5px 10px;
+  font-family: "Roboto Condensed", sans-serif;
+  
+}
+/* Style the header links */
+.header a {
+  float: left;
+  color: #1C2C5B;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  color:#1C2C5B;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  color: #FFC659;
+}
+
+/* Style the active/current link*/
+.header a.active {
+  background-color: #1C2C5B;
+  color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+.nav{
+  
+  background-color: #6CABDD;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+}
+.nav ul{
+  margin:0 !important;
+  height: 60px;
+  width:100%;
+  list-style: none;
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding:0 !important;
+}
+.nav li{
+  /* height:50px;
+  width:60px; */
+}
+.carousel-control-prev{
+  top:40% !important
+}
+.carousel-control-next{
+  top: 40% !important;
+}
+
+.nav a{
+  height:100%;
+  padding: 0 0px;
+  text-decoration: none;
+}
+
+.nav li:first-child{
+  margin-right: auto;
+}
+.nav li:last-child{
+
+}
+.mainnavbar li:first-child{
+  padding-left: 15px !important;
+}
+.sidebar{
+  position: fixed !important;
+  top:0;
+  right:0;
+  height: 100%!important;
+  width: 250px !important;;
+  z-index: 999;
+  background-color: white !important;  
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start!important;
+  justify-content: flex-start!important;
+}
+
+.sidebarhidden{
+  display: none !important; 
+}
+.sidebar li{
+  width: 100%;
+  height: 50px;
+  padding-left:15px;
+  padding-right: 0px;
+  margin-right: 0px!important;
+}
+
+.sidebar a{
+  width: 100%;
+  text-align: left;
+  height: 50px;
+}
+
+.sidebar a:hover{
+ 
+}
+
+.mainnavbar .hideOnMobile{
+  padding: 10px 0px !important;
+}
+
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .right{
+    float: right !important;
+  }
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    position: fixed;
+    top:0;
+    right:0;
+    height: 100vh;
+    width:250px;
+    z-index: 999;
+    background-color: transparent;
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+  .header-right a{
+    width:100%;
+  }
+
+.logout{
+  font-family: "Roboto Condensed", sans-serif;
+  background-color:#1C2C5B!important;
+  text-decoration: none;
+  outline: none;
+  border:none;
+  text-align: center !important;
+  padding:12px;
+  margin:auto;
+  border-radius: 10px;
+  color:white;
+  position: relative;
+  top:4px;
+  right:10px;
+  text-transform: uppercase;
+  width:100px;
+}
+
+.logout:hover{
+  cursor: pointer;
+  background-color: red !important;
+}
+.hideonpc{
+  display:none !important;
+  padding: 10px !important;
+}
+.naming{
+  font-size: 1.6rem!important;
+  font-weight: 600;
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .hideOnMobile{
+    display: none !important;
+  }
+  .hideonpc{
+    display: block !important;
+    float:right !important;
+    margin-right: 0px!important;
+  }
+  ul{
+    width:100%;
+  }
+}

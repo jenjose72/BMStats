@@ -1,0 +1,137 @@
+#root{
+    display:grid;
+    height:100%;
+    grid-template-rows:60px 1fr 60px;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+    gap:30px;
+
+}
+
+.header{
+    grid-column: span 3;
+}
+.footer{
+    grid-column: span 3;
+}
+.content{
+    grid-column-start: 2;
+    display:grid;
+    grid-template-rows: 500px 850px;
+    gap:60px;
+    width: 100%;
+}
+
+.statTable{
+
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:1fr 1fr;
+    grid-gap:5%
+}
+.listT{
+    background-color: rgba(255, 255, 255, 0.823);
+    border-radius:15px;
+    margin-top: 0px;
+    
+}
+
+.goals{
+    font-family: "Roboto Condensed", sans-serif;
+    float:right;
+    position:absolute;
+    right:15px;
+    color:#1C2C5B;
+    
+}
+
+.name{
+    float:left;
+    font-family: "Roboto Condensed", sans-serif;
+    color:#1C2C5B;
+}
+
+.individualcard{
+    border-bottom:2px solid grey;
+}
+
+.Heading{
+    text-align: center;
+    font-family: "Roboto Condensed", sans-serif;
+    color:#1C2C5B;
+    font-weight: 700;
+    font-style: normal;
+    font-size: larger;
+    padding:1rem;
+    border-bottom: 2px solid #1C2C5B;
+    background-color: #6CABDD;
+    border-radius: 15px;
+
+}
+
+.flex-container{
+    display:flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    width:-moz-fit-contentfit-content;
+    border:1px solid rgb(180, 180, 180);
+    border-radius:15px;
+    background-color: rgba(255, 255, 255, 0.823);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    
+}
+
+.viewlist{
+    position:relative;
+    text-align: right;
+    right:10px;
+    bottom:0px; 
+    font-family: "Roboto Condensed", sans-serif;
+    color:#1C2C5B;
+    text-decoration: none;
+}
+
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    #root{
+        display:grid;
+        height:100vh;
+        grid-template-rows:60px 1fr 60px;
+        grid-template-columns: 100%;
+        gap:30px;
+    
+    }
+    .content{
+        grid-column-start: 2;
+        display:grid;
+        grid-template-rows: 200px 1fr;
+        gap:1   0px;
+        width: 100%;
+        padding:10px 15px;
+        grid-template-columns: 100%;
+    }
+    .carousel{
+        width:100%;
+    }
+
+    .statTable{
+        display:grid;
+        grid-template-columns: 100%;
+        grid-template-rows:1fr 1fr 1fr 1fr ;
+        grid-gap:20px;
+    }
+    ul{
+        width:100%;
+    }
+    .flex-container{
+        display:flex;
+        flex-direction:column;
+        flex-wrap:nowrap;
+        width:100%;
+        border:1px solid rgb(180, 180, 180);
+        border-radius:15px;
+        background-color: rgba(255, 255, 255, 0.823);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        
+    }
+  }
+  

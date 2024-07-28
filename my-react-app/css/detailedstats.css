@@ -1,0 +1,123 @@
+#root{
+    display:grid;
+    height:100%;
+    grid-template-rows:60px 1fr 60px;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.header{
+    grid-column : span 3;
+}
+
+.footer{
+    grid-column :span 3;
+}
+
+.full-stat-list{
+    grid-column-start: 2;
+    display: grid;
+    grid-template-rows: 79px 30px ;
+}
+
+.newposition{
+    width:auto;
+    
+}
+
+.playerstats-heading{
+    position:relative;
+    top:50%;
+    font-family: "Roboto Condensed", sans-serif;
+    color:#1C2C5B;
+}
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    font-weight: 900;
+    background-color: #6CABDD;
+    color: #1C2C5B;
+    text-align: center;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+    text-align: center;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+    font-weight: 600;
+    color: #1C2C5B;
+}
+
+.styled-table tbody tr:nth-of-type(odd) {
+    font-weight: 600;
+    background-color: #ffffff;
+    color:#1C2C5B
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #6CABDD;
+}
+
+.season-selector{
+    position: relative;
+    width:120px;
+    height:30px;
+    margin-left: auto; 
+    margin-right: 0;
+    font-family: "Roboto Condensed", sans-serif;
+    color:#1C2C5B;
+    margin-top: 10px;
+}
+
+.table-header:hover{
+    cursor: pointer;
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    #root{
+        display: grid;
+        height:100%;
+        min-height: 100vh;
+        grid-template-rows: 60px 100% 60px;
+        grid-template-columns: 1fr;
+    }
+
+    .full-stat-list{
+        grid-column-start: 1;
+        overflow-x: auto;
+        margin-left: 10px;
+        display:grid;
+        grid-template-rows: 80px 40px 1fr;
+    }
+    select{
+        position:relative !important;
+        left:0;
+        width:90px;
+        margin-left: 0  ;
+    }
+    .season-selector{
+        position:relative !important;
+        left:0;
+        width:90px;
+        margin-left: 0  ;
+    }
+    .playerstats-heading{
+        font-size: 2.3rem;
+        margin-left: 0px;
+    }
+  }
