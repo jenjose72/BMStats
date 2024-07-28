@@ -46,9 +46,7 @@ app.use(passport.session());
 
 app.use(express.static(path.join(__dirname,"/my-react-app/dist")))
 
-app.get('*',(req,res)=>{
-    res.sendFile(path.join(__dirname,"/my-react-app/dist/index.html"));
-})
+
 
 app.get('/Stats',async(req,res)=>{
     try {
@@ -369,6 +367,10 @@ app.get('/adminpage',(req,res)=>{
         console.log(req);
         res.json({message:"not authenticated"});
     }
+})
+
+app.get('*',(req,res)=>{
+    res.sendFile(path.join(__dirname,"/my-react-app/dist/index.html"));
 })
 app.listen(3000,()=>{
     console.log('server is running on port 3000 && http://localhost:3000/');
