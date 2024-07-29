@@ -22,6 +22,7 @@ function PlayerTable(){
                 body:JSON.stringify({year:value})
             });
             const jsonData = await result.json();
+            console.log(jsonData);
             setPlayers(jsonData);
         } catch (error) {
             console.log(error);

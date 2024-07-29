@@ -3,25 +3,35 @@ import React from 'react';
 function FullStatList(){
     const [stats,setStats]=React.useState([]);
     const [year,setYear]=React.useState("s2324");
-    const [order,setOrder]=React.useState("name");
+    const [order,setOrder]=React.useState("player-name");
     React.useEffect(() =>{
         getStats(year,order);
-
     },[]);
+    function handleChange(event){
+        const {name,value} = event.target;
+        setYear(value);
+        getStats(value,order);
+       // console.log(value);
+    }
     async function getStats(value,order){
-        const response = await fetch('https://bluemoonstats.onrender.com/detailedstats',{
-            method:'POST',
-            headers:{
-                'Content-Type':'application/json'   
-            },
-            body:JSON.stringify({
-                year:value,
-                order:order
-            })
-        });
-        const data = await response.json();
-        //console.log(data);
-        setStats(data);
+        try {
+            const response = await fetch('https://bluemoonstats.onrender.com/detailedstats',{
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json'   
+                },
+                body:JSON.stringify({
+                    year:value,
+                    order:order
+                })
+            });
+            const data = await response.json();
+            console.log(data);
+            setStats(data);
+        } catch (error) {
+            console.error(error);
+        }
+        
     }
     // async function getStats(value,order){
     //     const response = await fetch('http://localhost:3000/detailedstats',{
@@ -38,12 +48,7 @@ function FullStatList(){
     //     //console.log(data);
     //     setStats(data);
     // }
-    function handleChange(event){
-        const {name,value} = event.target;
-        setYear(value);
-        getStats(value,order);
-       // console.log(value);
-    }
+    
     function handleClick(event){
         const name = event.target.className;
         setOrder(name);
