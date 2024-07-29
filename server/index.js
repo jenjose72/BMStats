@@ -202,11 +202,17 @@ app.post("/detailedstats",async(req,res)=>{
             }
         }
         else if(result1.year=="s2425"){
-            if(result1.order=="name"){
-                const result = await db.query('SELECT name,age,position,goals,assists,minutesplayed,matchesplayed FROM s2425 ORDER BY name ASC');
+            if(result1.order=="player-name"){
+                try {
+                    const result = await db.query('SELECT name,age,position,goals,assists,minutesplayed,matchesplayed FROM s2425 ORDER BY name ASC');
+                console.log(result.rows);
                 res.json(result.rows);
+                } catch (error) {
+                    console.error(error);
+                }
+                
             }
-            else if(result1.order=="goals"){
+            else if(result1.order=="goalss"){
                 const result = await db.query('SELECT name,age,position,goals,assists,minutesplayed,matchesplayed FROM s2425 ORDER BY goals DESC');
                 res.json(result.rows);
             }
@@ -222,11 +228,11 @@ app.post("/detailedstats",async(req,res)=>{
                 const result = await db.query('SELECT name,age,position,goals,assists,minutesplayed,matchesplayed FROM s2425 ORDER BY matchesplayed DESC');
                 res.json(result.rows);
             }
-            else if(result1.order=="age"){
+            else if(result1.order=="age-details"){
                 const result = await db.query('SELECT name,age,position,goals,assists,minutesplayed,matchesplayed FROM s2425 ORDER BY age ASC');
                 res.json(result.rows);
             }
-            else if(result1.order=="position"){
+            else if(result1.order=="position newposition"){
                 const result = await db.query('SELECT name,age,position,goals,assists,minutesplayed,matchesplayed FROM s2425 ORDER BY position ASC');
                 res.json(result.rows);
             }
