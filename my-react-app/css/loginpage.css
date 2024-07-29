@@ -143,14 +143,15 @@ button:hover{
         height:100vh;
         min-height: 100vh;
         grid-template-rows: 60px 100% 60px;
-        grid-template-columns: 100% ;
+        grid-template-columns: 1fr ;
     }
 
     .loginarea{
-        margin-left: 80px;
+        margin-left: 40px;
         grid-template-columns: 1fr;
         grid-column-start: 1;
        max-height: 650px;
+       margin-top:70px
     }
 
    .leftside{

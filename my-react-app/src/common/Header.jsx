@@ -19,7 +19,7 @@ function Header(){
                 <li><a href="/players">Players</a></li>
             </ul>
             <ul className="mainnavbar">
-                <li ><a href="/admin" className="naming">BlueMoonStats</a></li>
+                <li ><a href="https://www.linkedin.com/in/jenjosejeeson/" className="naming">BlueMoonStats</a></li>
                 <li className="hideOnMobile"><a href="/">Home</a></li>
                 <li className="hideOnMobile"><a href="/stats">Stats</a></li>
                 <li className="hideOnMobile"><a href="/players">Players</a></li>
